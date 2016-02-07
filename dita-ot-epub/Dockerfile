@@ -1,4 +1,4 @@
-FROM dita4publishers/dita-ot-base-epub
+FROM dita4publishers/dita-ot-base-epub:2.2.2
 MAINTAINER Eliot Kimber "ekimber@contrext.com"
 #
 # Make the DITA OT available via --volumes-from: 
