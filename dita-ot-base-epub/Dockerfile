@@ -1,8 +1,9 @@
-FROM dita4publishers/dita-ot-common:1.8.5
+FROM ditacommunity/dita-ot-base:1.8.5
 #
 # Sets up a DITA-OT container
 # with all of the DITA for Publishers 
 # open toolkit plugins integrated.
+USER dita-ot
 WORKDIR ${DITA_HOME}
 ENV DITA_COMM_URL=https://github.com/dita4publishers/ BRANCH=develop
 #
@@ -10,8 +11,12 @@ ENV DITA_COMM_URL=https://github.com/dita4publishers/ BRANCH=develop
 #
 RUN wget ${DITA_COMM_URL}net.sourceforge.dita4publishers.doctypes/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 #
-# All plugins 
+# Legacy sourceforge doctypes support:
 #
+RUN wget ${DITA_COMM_URL}org.dita4publishers.common.html/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
+RUN wget ${DITA_COMM_URL}org.dita4publishers.common.mapdriven/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
+RUN wget ${DITA_COMM_URL}org.dita4publishers.common.xslfo/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
+RUN wget ${DITA_COMM_URL}org.dita4publishers.common.xslt/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.dita2indesign/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.doctypes/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.enumeration-d.fo/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
