@@ -1,4 +1,4 @@
-FROM dita4publishers/dita-ot-common:1.8.5
+FROM dita4publishers/dita-ot-common
 #
 # Sets up a DITA-OT container
 # with just the EPUB transform. 

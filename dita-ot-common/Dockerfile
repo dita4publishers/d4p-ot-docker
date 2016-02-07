@@ -1,4 +1,4 @@
-FROM ditacommunity/dita-ot-base:1.8.5
+FROM ditacommunity/dita-ot-base
 #
 # Sets up a DITA-OT container
 # with all of the DITA for Publishers 
