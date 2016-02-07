@@ -25,8 +25,6 @@ RUN wget ${DITA_COMM_URL}org.dita4publishers.html5/archive/${BRANCH}.zip && unzi
 RUN wget ${DITA_COMM_URL}org.dita4publishers.json/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.kindle/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.math/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
-RUN wget ${DITA_COMM_URL}org.dita4publishers.math-d.html/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
-RUN wget ${DITA_COMM_URL}org.dita4publishers.media-d.html/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.pubContent-d.fo/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.pubmap.fo/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.pubmap.html/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip

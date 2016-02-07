@@ -12,6 +12,8 @@ RUN wget ${DITA_COMM_URL}org.dita4publishers.common.html/archive/${BRANCH}.zip &
 RUN wget ${DITA_COMM_URL}org.dita4publishers.common.mapdriven/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.common.xslfo/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 RUN wget ${DITA_COMM_URL}org.dita4publishers.common.xslt/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
+RUN wget ${DITA_COMM_URL}org.dita4publishers.math-d.html/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
+RUN wget ${DITA_COMM_URL}org.dita4publishers.media-d.html/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
 #
 # Integrate new plugins
 #
