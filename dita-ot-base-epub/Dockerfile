@@ -8,11 +8,11 @@ ENV DITA_COMM_URL=https://github.com/dita4publishers/ BRANCH=develop
 #
 # Legacy sourceforge doctypes support:
 #
-RUN wget ${DITA_COMM_URL}net.sourceforge.dita4publishers.doctypes/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
+RUN wget ${DITA_COMM_URL}net.sourceforge.dita4publishers.doctypes/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && mv plugins/net.sourceforge.dita4publishers.doctypes-${BRANCH} plugins/net.sourceforge.dita4publishers.doctypes && rm ${BRANCH}.zip
 #
 # All plugins 
 #
-RUN wget ${DITA_COMM_URL}org.dita4publishers.epub/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && rm ${BRANCH}.zip
+RUN wget ${DITA_COMM_URL}org.dita4publishers.epub/archive/${BRANCH}.zip && unzip ${BRANCH}.zip -d plugins && mv plugins/org.dita4publishers.epub-${BRANCH} plugins/org.dita4publishers.epub && rm ${BRANCH}.zip
 #
 # Integrate new plugins
 #
